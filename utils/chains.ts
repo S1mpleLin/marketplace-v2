@@ -1,32 +1,32 @@
 import { arbitrum, mainnet, polygon, optimism, Chain, bsc } from 'wagmi/chains'
 
 //Chains that are missing from wagmi:
-export const zora = {
-  id: 7777777,
-  name: 'ZORA',
-  network: 'zora',
-  nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
-  rpcUrls: {
-    default: {
-      http: ['https://rpc.zora.co'],
-      webSocket: ['wss://rpc.zora.co'],
-    },
-    public: {
-      http: ['https://rpc.zora.co'],
-      webSocket: ['wss://rpc.zora.co'],
-    },
-  },
-  blockExplorers: {
-    etherscan: {
-      name: 'ZORA',
-      url: 'https://explorer.zora.energy',
-    },
-    default: {
-      name: 'ZORA',
-      url: 'https://explorer.zora.energy',
-    },
-  },
-} as const satisfies Chain
+// export const zora = {
+//   id: 7777777,
+//   name: 'ZORA',
+//   network: 'zora',
+//   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+//   rpcUrls: {
+//     default: {
+//       http: ['https://rpc.zora.co'],
+//       webSocket: ['wss://rpc.zora.co'],
+//     },
+//     public: {
+//       http: ['https://rpc.zora.co'],
+//       webSocket: ['wss://rpc.zora.co'],
+//     },
+//   },
+//   blockExplorers: {
+//     etherscan: {
+//       name: 'ZORA',
+//       url: 'https://explorer.zora.energy',
+//     },
+//     default: {
+//       name: 'ZORA',
+//       url: 'https://explorer.zora.energy',
+//     },
+//   },
+// } as const satisfies Chain
 
 export const base = {
   id: 8453,
@@ -245,16 +245,16 @@ export default [
     collectionSetId: process.env.NEXT_PUBLIC_BASE_COLLECTION_SET_ID,
     community: process.env.NEXT_PUBLIC_BASE_COMMUNITY,
   },
-  {
-    ...linea,
-    lightIconUrl: '/icons/linea-icon-dark.svg',
-    darkIconUrl: '/icons/linea-icon-light.svg',
-    reservoirBaseUrl: 'https://api-linea.reservoir.tools',
-    proxyApi: '/api/reservoir/linea',
-    routePrefix: 'linea',
-    apiKey: process.env.RESERVOIR_API_KEY,
-    coingeckoId: 'ethereum',
-    collectionSetId: process.env.NEXT_PUBLIC_LINEA_COLLECTION_SET_ID,
-    community: process.env.NEXT_PUBLIC_LINEA_COMMUNITY,
-  },
+  // {
+  //   ...linea,
+  //   lightIconUrl: '/icons/linea-icon-dark.svg',
+  //   darkIconUrl: '/icons/linea-icon-light.svg',
+  //   reservoirBaseUrl: 'https://api-linea.reservoir.tools',
+  //   proxyApi: '/api/reservoir/linea',
+  //   routePrefix: 'linea',
+  //   apiKey: process.env.RESERVOIR_API_KEY,
+  //   coingeckoId: 'ethereum',
+  //   collectionSetId: process.env.NEXT_PUBLIC_LINEA_COLLECTION_SET_ID,
+  //   community: process.env.NEXT_PUBLIC_LINEA_COMMUNITY,
+  // },
 ] as ReservoirChain[]
