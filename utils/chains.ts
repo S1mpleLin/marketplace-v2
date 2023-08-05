@@ -114,6 +114,34 @@ export const linea = {
   },
 } as const satisfies Chain
 
+export const pego = {
+  id: 20201022,
+  name: 'pego',
+  network: 'pego',
+  nativeCurrency: { name: 'PG', symbol: 'PG', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ['https://pegorpc.com'],
+    },
+    public: {
+      http: ['https://pegorpc.com'],
+    },
+    // infura: {
+    //   http: ['https://linea-mainnet.infura.io/v3'],
+    // },
+  },
+  blockExplorers: {
+    etherscan: {
+      name: 'pego Explorer',
+      url: 'https://scan.pego.network/api',
+    },
+    default: {
+      name: 'pego Explorer',
+      url: 'https://scan.pego.network/api',   // https://scan.pego.network/api/eth-rpc
+    },
+  },
+} as const satisfies Chain
+
 //CONFIGURABLE: The default export controls the supported chains for the marketplace. Removing
 // or adding chains will result in adding more or less chains to the marketplace.
 // They are an extension of the wagmi chain objects
@@ -256,5 +284,17 @@ export default [
     coingeckoId: 'ethereum',
     collectionSetId: process.env.NEXT_PUBLIC_LINEA_COLLECTION_SET_ID,
     community: process.env.NEXT_PUBLIC_LINEA_COMMUNITY,
+  },
+  {
+    ...pego,
+    lightIconUrl: '/icons/bsc-icon-dark.svg',
+    darkIconUrl: '/icons/bsc-icon-light.svg',
+    reservoirBaseUrl: 'https://api-bsc.reservoir.tools',
+    proxyApi: '/api/reservoir/bsc',
+    routePrefix: 'pego',
+    apiKey: process.env.RESERVOIR_API_KEY,
+    coingeckoId: 'ethereum',
+    collectionSetId: process.env.NEXT_PUBLIC_BSC_COLLECTION_SET_ID,
+    community: process.env.NEXT_PUBLIC_BSC_COMMUNITY,
   },
 ] as ReservoirChain[]
