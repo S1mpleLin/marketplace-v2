@@ -161,9 +161,9 @@ export type ReservoirChain = Chain & {
 export const DefaultChain: ReservoirChain = {
   ...mainnet,
   // Any url to display the logo of the chain in light mode
-  lightIconUrl: '/icons/eth-icon-dark.svg',
+  lightIconUrl: '/icons/bsc-icon-dark.svg',
   // Any url to display the logo of the chain in dark mode
-  darkIconUrl: '/icons/eth-icon-light.svg',
+  darkIconUrl: '/icons/bsc-icon-light.svg',
   // The base url of the reservoir api, this is used in the app when
   // directly interacting with the reservoir indexer servers (in the api proxy for example)
   // or when prefetching server side rendered data
@@ -172,22 +172,22 @@ export const DefaultChain: ReservoirChain = {
   // Prevents the api key from being leaked in the clientside requests
   // If you'd like to disable proxying you can just change the proxyApi to the reservoirBaseUrl
   // Doing so will omit the api key unless further changes are made
-  proxyApi: '/api/reservoir/ethereum',
+  proxyApi: '/api/reservoir/bsc',
   // A prefix used in the asset specific routes on the app (tokens/collections)
-  routePrefix: 'ethereum',
+  routePrefix: 'bsc',
   // Reservoir API key which you can generate at https://reservoir.tools/
   // This is a protected key and displays as 'undefined' on the browser
   // DO NOT add NEXT_PUBLIC to the key or you'll risk leaking it on the browser
   apiKey: process.env.RESERVOIR_API_KEY,
   // Coingecko id, used to convert the chain's native prices to usd. Can be found here:
   // https://www.coingecko.com/en/api/documentation#operations-coins-get_coins_list
-  coingeckoId: 'ethereum',
+  coingeckoId: 'bsc',
   collectionSetId: process.env.NEXT_PUBLIC_ETH_COLLECTION_SET_ID,
   community: process.env.NEXT_PUBLIC_ETH_COMMUNITY,
 }
 
 export default [
-  // DefaultChain,
+  DefaultChain,
   // {
   //   ...polygon,
   //   lightIconUrl: '/icons/polygon-icon-dark.svg',
