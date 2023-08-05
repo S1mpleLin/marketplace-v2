@@ -65,7 +65,7 @@ const Navbar = () => {
                 src="/reservoirLogo.svg"
                 width={34}
                 height={39}
-                alt="Reservoir"
+                alt="#"
               />
             </Box>
           </Link>
@@ -105,14 +105,14 @@ const Navbar = () => {
                   src="/reservoirMarketLogo.svg"
                   width={112}
                   height={36}
-                  alt="Reservoir"
+                  alt="#"
                 />
               ) : (
                 <Image
                   src="/reservoirMarketLogoLight.svg"
                   width={112}
                   height={36}
-                  alt="Reservoir"
+                  alt="#"
                 />
               )}
             </Box>
