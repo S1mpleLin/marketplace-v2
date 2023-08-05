@@ -187,7 +187,7 @@ export const DefaultChain: ReservoirChain = {
 }
 
 export default [
-  DefaultChain,
+  // DefaultChain,
   // {
   //   ...polygon,
   //   lightIconUrl: '/icons/polygon-icon-dark.svg',
